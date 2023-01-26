@@ -41,7 +41,7 @@ export default function Sidebar() {
             {/*Menu*/}
             <div className="mt-4 mb-2.5 space-y-2 xl:items-start">
                 <SidebarMenuItem text="Home" Icon={HomeIcon} active />
-                <SidebarMenuItem text="Explore" Icon={HashtagIcon} />
+                <p onClick={() => { router.push('/') }}><SidebarMenuItem text="Explore" Icon={HashtagIcon} /></p>
                 {session && (
                     <>
                         <SidebarMenuItem text="Notifications" Icon={BellIcon} />
