@@ -44,7 +44,7 @@ export default function Profile({ newsResults, randomUsersResults }) {
                             className="w-[250px] rounded-full xl:mr-2"
                         />
                     </div>
-                    <div className="flex flex-col justify-center m-[30%]">
+                    <div className="flex flex-col justify-center ml-[25%] mr-[25%] mt-[15%]">
                         <div className="mt-8 ">
                             <h1 className="text-black font-bold text-3xl tracking-wide">{session?.user.name}</h1></div>
                         <div className="mt-3 text-black text-2xl font-bold">
@@ -52,7 +52,7 @@ export default function Profile({ newsResults, randomUsersResults }) {
                             @{session?.user.username}
                         </div>
                         <div className="mt-3 text-black font-bold text-2xl">
-                            <span class="text-gray-500 font-semibold mr-6">E-mail:</span>
+                            <span class="text-gray-500 font-semibold mr-6">Email:</span>
                             {session?.user.email}
                         </div>
                     </div>
