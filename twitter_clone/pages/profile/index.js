@@ -41,7 +41,7 @@ export default function Profile({ newsResults, randomUsersResults }) {
                         <img
                             src={session?.user.image}
                             alt="user-img"
-                            className="h-10 w-10 rounded-full xl:mr-2"
+                            className="w-[250px] rounded-full xl:mr-2"
                         />
                     </div>
                     <div className="flex flex-col justify-center m-[30%]">

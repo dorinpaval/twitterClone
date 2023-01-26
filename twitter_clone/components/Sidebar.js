@@ -25,6 +25,11 @@ export default function Sidebar() {
         console.log("hfkjy")
     }
 
+    function handleSignOut() {
+        router.push("/");
+        signOut();
+    }
+
     return (
         <div className='hidden sm:flex flex-col p-2 mx-[2%] xl:items-start fixed h-full  xl:ml-24'>
             {/*Logo*/}
@@ -52,7 +57,7 @@ export default function Sidebar() {
             {/*Button*/}
             {session ? (
                 <>
-                    <button onClick={signOut} className="mt-2 bg-blue-400 text-white rounded-full w-56 h-12 font-bold shadow hover:brightness-90 text-lg hidden xl:inline">Log out</button>
+                    <button onClick={handleSignOut} className="mt-2 bg-blue-400 text-white rounded-full w-56 h-12 font-bold shadow hover:brightness-90 text-lg hidden xl:inline">Log out</button>
 
                     {/*Buttom Profile Section */}
                     <div className="hoverEffect text-gray-700 flex items-center justify-center xl:justify-start mt-auto">
