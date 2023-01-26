@@ -88,6 +88,7 @@ export default function Comment({ comment, commentId, originalPostId }) {
     }
 
     return (
+        <div className='xl:ml-[25%] border-l border-r xl:min-w-[50%] sm:ml-[5%] flex-grow max-w-xl'>
         <div className="flex p-3 cursor-pointer border-b border-gray-200 pl-20">
             {/* user image */}
             <img
@@ -171,6 +172,7 @@ export default function Comment({ comment, commentId, originalPostId }) {
                     <ChartBarIcon className="h-9 w-9 hoverEffect p-2 hover:text-sky-500 hover:bg-sky-100" />
                 </div>
             </div>
+        </div>
         </div>
     );
 }

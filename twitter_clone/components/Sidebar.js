@@ -13,11 +13,18 @@ import {
     UserIcon,
 } from '@heroicons/react/outline'
 import { useSession, signIn, signOut } from "next-auth/react";
-
+import { useRouter } from "next/router";
 
 export default function Sidebar() {
     const { data: session } = useSession();
     console.log("session", session?.user);
+    const router = useRouter();
+
+    function goToProfile() {
+        router.push(`/profile`);
+        console.log("hfkjy")
+    }
+
     return (
         <div className='hidden sm:flex flex-col p-2 mx-[2%] xl:items-start fixed h-full  xl:ml-24'>
             {/*Logo*/}
@@ -36,7 +43,7 @@ export default function Sidebar() {
                         <SidebarMenuItem text="Messages" Icon={InboxIcon} />
                         <SidebarMenuItem text="Bookmarks" Icon={BookmarkIcon} />
                         <SidebarMenuItem text="Lists" Icon={ClipboardIcon} />
-                        <SidebarMenuItem text="Profile" Icon={UserIcon} />
+                        <button onClick={goToProfile}><SidebarMenuItem text="Profile" Icon={UserIcon} /></button>
                         <SidebarMenuItem text="More" Icon={DotsCircleHorizontalIcon} />
                     </>
                 )}
